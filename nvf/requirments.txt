@@ -1,0 +1,16 @@
+bpy==3.6.0
+gtsam
+numpy
+matplotlib
+opencv-python
+hydra-core
+munch
+setuptools
+wheel
+bpycv
+pytest
+gym
+openpyxl
+trimesh==3.23.5
+openpyxl
+nvitop

@@ -1,0 +1,11 @@
+root: "data"
+resolution: [512, 512]
+resolution_percentage: 100
+fov: 90
+hfov: ${fov}
+vfov: ${fov}
+hdri_rotation: [0, 0, 0]
+cycles: True
+cycles_samples: 10000
+gpu: True
+scale: 0.16666
