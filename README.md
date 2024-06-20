@@ -51,7 +51,7 @@ You can run with different scenes:
 ```bash
 python eval.py --scene {hubble,room,lego,hotdog} --method nvf
 ```
-To train on the NeRF datasets, download the blend files from the NeRF dataset's [Google Drive](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1) and place them into /data/assets/blend_files/
+To train on the datasets, download the .blend and .ply files from our [google drive](https://drive.google.com/drive/folders/1s2g-gBiHMOdQTVtmuTLGfcaA7OMJazvt?usp=sharing) and place them into /data/assets/blend_files/
 
 ## Viewing
 
