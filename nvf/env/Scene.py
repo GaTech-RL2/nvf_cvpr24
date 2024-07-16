@@ -118,3 +118,26 @@ class RoomScene(BlenderFile):
         TF=np.array([[1,0,0,0],[0,0,-1,0],[0,1,0,0],[0,0,0,1]])
         mesh = mesh.apply_transform(TF)
         return mesh
+    
+def trimesh_load_mesh(path):
+    mesh_or_scene = trimesh.load(path)
+
+    # if self.cfg.scale !=1.:
+    #     matrix = np.eye(4)
+    #     matrix[:2, :2] *= self.cfg.scale
+    #     mesh_or_scene.apply_transform(matrix)
+
+    if isinstance(mesh_or_scene, trimesh.Scene):
+        # If the scene contains multiple meshes, you have a few options:
+        
+        # Option 1: Get a single mesh (if you know there's only one)
+        if len(mesh_or_scene.geometry) == 1:
+            mesh = next(iter(mesh_or_scene.geometry.values()))
+
+        # Option 2: Combine all meshes into one
+        else:
+            mesh = trimesh.util.concatenate(tuple(mesh_or_scene.geometry.values()))
+    else:
+        # The loaded object is already a Trimesh object
+        mesh = mesh_or_scene
+    return mesh
