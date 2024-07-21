@@ -28,6 +28,10 @@ class HubbleScene(BlenderGLB):
         }
         # self.set_world('rgb')
 
+    def get_mesh(self):
+        mesh = trimesh.load(os.path.join(self.cfg.root,'assets/models/Hubble.glb'),force='mesh')
+        return mesh 
+
 class LegoScene(BlenderFile):
     """docstring for LegoScene"""
     name = 'lego'
