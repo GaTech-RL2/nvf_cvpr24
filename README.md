@@ -23,7 +23,7 @@ pip install torch==2.0.1+cu117 torchvision==0.15.2+cu117 --extra-index-url https
 pip install ninja
 conda install -y -c "nvidia/label/cuda-11.7.1" cuda-nvcc
 conda install -y -c "nvidia/label/cuda-11.7.1" cuda-toolkit
-pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+conda install nvidia/label/cuda-11.7.1::cuda-cudart
 
 pip install --upgrade pip setuptools
 pip install -e .
